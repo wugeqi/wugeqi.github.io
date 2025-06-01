@@ -98,7 +98,7 @@
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">3</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">5</span></li></ul>
               </li>
             
           
@@ -139,6 +139,330 @@
         <div style="max-width: 1000px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"><span class="article-date">
+  2025-06-01
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a><strong>软件测试</strong></h1><h2 id="一、基本测试内容的学习"><a href="#一、基本测试内容的学习" class="headerlink" title="一、基本测试内容的学习"></a>一、基本测试内容的学习</h2><h3 id="1-测试种类"><a href="#1-测试种类" class="headerlink" title="1.测试种类"></a>1.测试种类</h3><h4 id="按方法分"><a href="#按方法分" class="headerlink" title="按方法分"></a><u>按方法分</u></h4><ul>
+<li><p>白盒测试</p>
+<!--内部具体实现是透明的，测试人员可以根据代码内部结构设置测试用例检查软件的代码、函数和方法等内部结构-->
+
+<p>方法：</p>
+</li>
+<li><p>黑盒测试</p>
+<!--把软件比作一个黑盒子，不考虑内部是如何实现的，只考虑外部功能的运行，检查软件的输入和输出是否匹配-->
+
+
+</li>
+<li><p>灰盒测试</p>
+<!--介于白盒和黑盒测试之间，既可以根据外部暴露出的功能进行检测，也可以参考内部的代码结构-->
+
+<h4 id="按阶段分"><a href="#按阶段分" class="headerlink" title="按阶段分"></a>按阶段分</h4></li>
+<li><p>单元测试</p>
+<!--最小模块的测试，对代码、函数、方法测试，一般由开发人员执行-->
+</li>
+<li><p><u>集成测试</u></p>
+<!--主要是测试接口，所以也叫接口测试。接口：模块与模块之间交换数据的通道-->
+
+<p>工具：postman、jmeter</p>
+<p>信息：接口名称，接口地址url，接口类型（post 修改数据库数据，像服务器发送数据,get 从数据库读取数据,put，patch，delete，copy，head，options，link，unlink，purge，lock，unlock，propfind，view），<u>接口参数</u>（orm-data，ram（text，json，xml），x-www-form-urlencoded,none,binary），请求头headers ,返回的数据，状态码，缓存（session和cookies)</p>
+<p>方法：</p>
+</li>
+<li><p><u>系统测试</u></p>
+<!--对系统的功能、性能、安全、UI、稳定性、易用性、兼容性等进行测试-->
+
+<p>UI测试</p>
+</li>
+<li><p>验收测试</p>
+<!--软件发布之前进行的测试，这是测试的最后一个阶段，也叫交付测试，评估产品是否可以发布-->
+
+<h4 id="按对象分"><a href="#按对象分" class="headerlink" title="按对象分"></a>按对象分</h4></li>
+<li><p>web测试</p>
+</li>
+<li><p>app测试</p>
+</li>
+<li><p>小程序测试</p>
+</li>
+<li><p>车联网测试</p>
+</li>
+<li><p>物联网测试</p>
+<h4 id="按状态分"><a href="#按状态分" class="headerlink" title="按状态分"></a>按状态分</h4></li>
+<li><p>动态测试</p>
+<!--运行软件，判断软件运行结果与预期结果的差异，检测软件的正确性（黑盒测试）-->
+</li>
+<li><p>静态测试</p>
+<!--不运行软件，检查软件代码、方法、函数、文档的正确性。（白盒测试）-->
+
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4></li>
+<li><p>回归测试</p>
+<!--检查开发有没有把bug修改好，重新测试一遍，以保持正确性。-->
+</li>
+<li><p>冒烟测试</p>
+<!--测试前的测试，检查开发是否进行自测，软件是否具有可测试性。-->
+</li>
+<li><p>α测试</p>
+<!--产品内测-->
+</li>
+<li><p>β测试</p>
+<!--产品公测-->
+
+
+
+
+
+<h4 id="按方向分"><a href="#按方向分" class="headerlink" title="按方向分"></a>按方向分</h4></li>
+<li><p><u>性能测试</u></p>
+<!--测试性能-->
+
+<h6 id="客户端性能测试："><a href="#客户端性能测试：" class="headerlink" title="客户端性能测试："></a>客户端性能测试：</h6><p>启动速度、消耗资源（CPU、内存、硬盘、流量、电量）</p>
+<h6 id="服务端性能测试："><a href="#服务端性能测试：" class="headerlink" title="服务端性能测试："></a>服务端性能测试：</h6><table>
+<thead>
+<tr>
+<th align="center">名字</th>
+<th>定义</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">压力测试</td>
+<td>获取系统正常运行的上限，检查软件在瞬间峰值的情况下是否能够正确运行</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">负载测试</td>
+<td>在峰值的持续压力下运行软件，看软件的承载极限达到什么程度</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">并发测试</td>
+<td>检查在并发条件下会不会出现数据错乱的情况</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>安全测试</p>
+<!--对软件的安全做出测试-->
+
+<p>流量攻击：模拟大量用户访问服务器，不进行任何有效操作，无端消耗服务器资源</p>
+<p>渗透测试：发现软件系统中存在的漏洞，判断系统的安全性</p>
+<p><u>SQL注入</u>：通过数据库的关键字进行异常操作，恶意执行不相干的SQL命令</p>
+<p>跨域攻击：诱导用户访问非法网站，利用会话信息模拟请求，盗取和纂改数据</p>
+<p>暴力破解：写响应的脚本，用穷举法不断尝试破解对方的信息</p>
+<p>劫持：通过不安全的wifi连接，进行表单提交的操作，造成数据泄漏 </p>
+</li>
+<li><p><u>功能测试</u></p>
+</li>
+</ul>
+<!--测试产品的功能，以确定是否满足设计需求-->
+
+<h3 id="2-测试方法"><a href="#2-测试方法" class="headerlink" title="2.测试方法"></a>2.测试方法</h3><h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h4><ul>
+<li>边界值：左边界和右边界</li>
+<li>等价类：有效等价类，无效等价类</li>
+<li>用户场景法：成功的场景，失败的场景</li>
+</ul>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>因果图</li>
+<li>判定图</li>
+<li>路径覆盖法</li>
+</ul>
+<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><ul>
+<li><p>瀑布流</p>
+<!--需求分析→软件设计→软件实现（编码）→软件测试→交付验收→实施维护，有完整上下结构，必须完成上一个步骤，才能开始下一个步骤。犯错成本高，容错率低，效 率低，维护成本高。-->
+</li>
+<li><p>v字型</p>
+<!--测试和开发的工作一一对应。必须完成上一个步骤，才能开始下一个步骤，效率低。-->
+</li>
+<li><p>w字型</p>
+<!--每个阶段测试和开发都有事做。第一个V代表开发，第二个V代表测试。-->
+</li>
+<li><p>H型</p>
+</li>
+<li><p>螺旋型</p>
+</li>
+<li><p>敏捷型</p>
+</li>
+</ul>
+<h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><ul>
+<li><p>需求分析</p>
+</li>
+<li><p>测试设计</p>
+</li>
+<li><p>编写测试文档</p>
+<p>测试用例的设计：编号（唯一），用例名称，前置条件，优先级，重要级，测试数据，测试步骤，预期结果，实际结果。</p>
+</li>
+<li><p>测试总结</p>
+</li>
+</ul>
+<h3 id="3-测试工具"><a href="#3-测试工具" class="headerlink" title="3.测试工具"></a>3.测试工具</h3><ul>
+<li>postman</li>
+<li>jmeter</li>
+<li>swagger</li>
+</ul>
+<h3 id="4-测试案例"><a href="#4-测试案例" class="headerlink" title="4.测试案例"></a>4.测试案例</h3><ul>
+<li>登录界面</li>
+<li>购物场景</li>
+<li>消息队列</li>
+</ul>
+<h2 id="二、提高测试内容的学习"><a href="#二、提高测试内容的学习" class="headerlink" title="二、提高测试内容的学习"></a>二、提高测试内容的学习</h2><h3 id="1-python"><a href="#1-python" class="headerlink" title="1.python"></a>1.python</h3><h3 id="2-自动化框架"><a href="#2-自动化框架" class="headerlink" title="2.自动化框架"></a>2.自动化框架</h3>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2025/06/01/linux%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2025/06/01/linux%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"><span class="article-date">
+  2025-06-01
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <p>linux常见命令</p>
+<ol>
+<li><p>启动程序：vi</p>
+</li>
+<li><p>关闭程序：kill -9 pid(进程号)</p>
+</li>
+<li><p>查看进程号：ps -ef 查看所有运行中的进程 ps -ef |grep pid 查看指定程序的进程号</p>
+</li>
+<li><p>安装:wget</p>
+</li>
+<li><p>新建文件：touch</p>
+</li>
+<li><p>新建文件夹：mkdir</p>
+</li>
+<li><p>复制粘贴：cp</p>
+<p>. 当前文件夹</p>
+<p>,,上级文件夹</p>
+<p>~回到桌面（用户文件夹）</p>
+<p>&#x2F;根目录</p>
+</li>
+<li><p>移动文件：mv 文件夹名 目标文件夹</p>
+</li>
+<li><p>重命名：mv 文件 重命名文件名</p>
+</li>
+<li><p>打开文件夹：cd</p>
+</li>
+<li><p>列出当前文件名：ls</p>
+</li>
+<li><p>查看文件详情列表：ll</p>
+</li>
+<li><p>删除：rm</p>
+</li>
+<li><p>文件编辑：vi,vim</p>
+</li>
+<li><p>读文件：</p>
+<p><strong>1.cat 文件名</strong></p>
+<p>直接输出文件内容，一次性读</p>
+<p><strong>2.more 文件名</strong></p>
+<p>分页读，有显示进度条，“ctrl+C”退出</p>
+<p><strong>3.tail</strong></p>
+<p>读取动态文件内容。（比如实时变化更新的日志文件）</p>
+<p>tail -f 文件名（一直动态读取最新内容）</p>
+<p>tail -q 文件名 （读取时不显示处理信息）</p>
+<p>tail -n 数字 文件名（读取最新几行的信息，数字几就是最新几行）</p>
+<p>tail -c 文件名 （读取时显示字节数）</p>
+</li>
+<li><p>写文件：</p>
+<p><strong>1.编辑已有文件</strong></p>
+<p>vi 文件名 – 按“i” 进入编辑模式（出现–INSERT–字样） – 输入内容 –按“ESC”退出编辑模式 – 在底端输入“:wq”保存并退出。</p>
+<p>:wq （保存并退出）</p>
+<p>:q（退出）</p>
+<p>:q！（不保存，强制退出）</p>
+<p><strong>2.新建可编辑文件</strong></p>
+<p>直接输入“vi”进入编辑器 – 按“i”进入编辑模式 –输入内容 – 按“ESC”退出编辑模式 –在底端输入“:wq 新建文件名”新建文件，保存并退出。</p>
+</li>
+<li></li>
+</ol>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2025/06/01/%E8%BF%99%E6%98%AF%E5%85%B3%E4%BA%8E%E7%BD%91%E4%B8%8A%E5%9B%BE%E7%89%87%E7%9A%84%E6%B5%8B%E8%AF%95/" >
+  
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2025/06/01/%E8%BF%99%E6%98%AF%E5%85%B3%E4%BA%8E%E7%BD%91%E4%B8%8A%E5%9B%BE%E7%89%87%E7%9A%84%E6%B5%8B%E8%AF%95/"><span class="article-date">
+  2025-06-01
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-entry">
+        
+          <p>这是关于网上图片的测试</p>
+<p><img src="https://th.bing.com/th/id/OIP.aJojHGRid2PGJagJod52VwHaHa?w=213&h=213&c=7&r=0&o=5&dpr=2&pid=1.7"></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
@@ -204,54 +528,6 @@
       <div class="article-entry">
         
           <p>11111</p>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/01/hello-world/" >
-  Hello World
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/01/hello-world/"><span class="article-date">
-  2025-06-01
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
         
       </div>
