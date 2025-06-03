@@ -184,7 +184,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="color: #ff7d73">
+                <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" style="color: #00bcd4">
                     软件测试
                 </a>
             </span>
@@ -194,41 +194,42 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a><strong>软件测试</strong></h1><h2 id="一、基本测试内容的学习"><a href="#一、基本测试内容的学习" class="headerlink" title="一、基本测试内容的学习"></a>一、基本测试内容的学习</h2><span id="more"></span>
+        <h2 id="一、基本测试内容的学习"><a href="#一、基本测试内容的学习" class="headerlink" title="一、基本测试内容的学习"></a>一、基本测试内容的学习</h2><h3 id="1-测试种类"><a href="#1-测试种类" class="headerlink" title="1.测试种类"></a>1.测试种类</h3><h4 id="按方法分"><a href="#按方法分" class="headerlink" title="按方法分"></a><u>按方法分</u></h4><ul>
+<li>&#x3D;&#x3D;白盒测试&#x3D;&#x3D;</li>
+</ul>
+<span id="more"></span>
 
-<h3 id="1-测试种类"><a href="#1-测试种类" class="headerlink" title="1.测试种类"></a>1.测试种类</h3><h4 id="按方法分"><a href="#按方法分" class="headerlink" title="按方法分"></a><u>按方法分</u></h4><ul>
-<li><p>&#x3D;&#x3D;白盒测试&#x3D;&#x3D;</p>
-<p>定义：内部具体实现是透明的，测试人员可以根据代码内部结构设置测试用例检查软件的代码、函数和方法等内部结构</p>
-<p>分类：静态分析：不需要执行程序就可以进行的测试，例如代码审查代码扫描（SonarQube)  动态分析：需要执行程序才可以进行的测试</p>
-<p>方法：</p>
-<p>参考：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_67553250/article/details/123500396?fromshare=blogdetail&sharetype=blogdetail&sharerId=123500396&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/weixin_67553250/article/details/123500396?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=123500396&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
-<p>1.逻辑覆盖法：</p>
-<p>语句覆盖：每条语句至少执行一次</p>
-<p>缺点：无法发现代码中的逻辑错误问题</p>
-<p>判定覆盖：每个判定的分支至少执行一次</p>
-<p>条件覆盖：每个判定的每个条件应取到各种可能的值</p>
-<p>判定条件覆盖同时满足判定覆盖条件覆盖</p>
-<p>条件组合覆盖：每个判定中各条件的每一种组合至少出现一次</p>
-<p>路径覆盖：每一条可能的路径至少执行一次</p>
-<p><img src="https://i-blog.csdnimg.cn/blog_migrate/29d431d9f4d92e2091c73d20274e0da9.png" alt="img"></p>
-<p>语句覆盖：</p>
-<p>1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0)</p>
-<p>2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0)</p>
-<p>判定覆盖：</p>
-<p>1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0)</p>
-<p>2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0)</p>
-<p>3.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&gt;0)</p>
-<p>4.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&gt;0)</p>
-<p>条件覆盖：</p>
-<p>1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0) x&#x3D;1 y&#x3D;-1 magic&#x3D;-1 x&#x3D;10000000 y&#x3D;-10000000 magic&#x3D;-10000000 &#x2F;x&#x3D;0.0001 y&#x3D;-0.0001 magic&#x3D;-0.0001</p>
-<p>2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0) x&#x3D;0 y&#x3D;0 magic&#x3D;-1 x&#x3D;-1 y&#x3D;1 magic &#x3D;-1</p>
-<p>3.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&gt;&#x3D;0) x&#x3D;1 y&#x3D;-1 magic&#x3D;0 x&#x3D;1 y&#x3D;-1 magic&#x3D;1</p>
-<p>4.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&gt;&#x3D;0) x&#x3D;-1 y&#x3D;1 magic&#x3D;1&#x2F; x&#x3D;0 y&#x3D;0 magic&#x3D;0&#x2F;x&#x3D;0 y&#x3D;1 magic &#x3D;1&#x2F;x&#x3D;-1 y&#x3D;0 magic&#x3D;1&#x2F;x&#x3D;-1 y&#x3D;1 magic&#x3D;0</p>
-<p>条件组合覆盖：</p>
-<p>路径覆盖：</p>
-<p>2.基本路径测试</p>
-</li>
+<p>  定义：内部具体实现是透明的，测试人员可以根据代码内部结构设置测试用例检查软件的代码、函数和方法等内部结构</p>
+<p>  分类：静态分析：不需要执行程序就可以进行的测试，例如代码审查代码扫描（SonarQube)  动态分析：需要执行程序才可以进行的测试</p>
+<p>  方法：</p>
+<p>  参考：</p>
+<p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_67553250/article/details/123500396?fromshare=blogdetail&sharetype=blogdetail&sharerId=123500396&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/weixin_67553250/article/details/123500396?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=123500396&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>  1.逻辑覆盖法：</p>
+<p>  语句覆盖：每条语句至少执行一次</p>
+<p>  缺点：无法发现代码中的逻辑错误问题</p>
+<p>  判定覆盖：每个判定的分支至少执行一次</p>
+<p>  条件覆盖：每个判定的每个条件应取到各种可能的值</p>
+<p>  判定条件覆盖同时满足判定覆盖条件覆盖</p>
+<p>  条件组合覆盖：每个判定中各条件的每一种组合至少出现一次</p>
+<p>  路径覆盖：每一条可能的路径至少执行一次</p>
+<p>  <img src="https://i-blog.csdnimg.cn/blog_migrate/29d431d9f4d92e2091c73d20274e0da9.png" alt="img"></p>
+<p>  语句覆盖：</p>
+<p>  1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0)</p>
+<p>  2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0)</p>
+<p>  判定覆盖：</p>
+<p>  1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0)</p>
+<p>  2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0)</p>
+<p>  3.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&gt;0)</p>
+<p>  4.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&gt;0)</p>
+<p>  条件覆盖：</p>
+<p>  1.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&lt;0) x&#x3D;1 y&#x3D;-1 magic&#x3D;-1 x&#x3D;10000000 y&#x3D;-10000000 magic&#x3D;-10000000 &#x2F;x&#x3D;0.0001 y&#x3D;-0.0001 magic&#x3D;-0.0001</p>
+<p>  2.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&lt;0) x&#x3D;0 y&#x3D;0 magic&#x3D;-1 x&#x3D;-1 y&#x3D;1 magic &#x3D;-1</p>
+<p>  3.（x&gt;0&amp;&amp;y&lt;0)&amp;&amp;(magic&gt;&#x3D;0) x&#x3D;1 y&#x3D;-1 magic&#x3D;0 x&#x3D;1 y&#x3D;-1 magic&#x3D;1</p>
+<p>  4.(x&lt;&#x3D;0||y&gt;&#x3D;0)&amp;&amp;(magic&gt;&#x3D;0) x&#x3D;-1 y&#x3D;1 magic&#x3D;1&#x2F; x&#x3D;0 y&#x3D;0 magic&#x3D;0&#x2F;x&#x3D;0 y&#x3D;1 magic &#x3D;1&#x2F;x&#x3D;-1 y&#x3D;0 magic&#x3D;1&#x2F;x&#x3D;-1 y&#x3D;1 magic&#x3D;0</p>
+<p>  条件组合覆盖：</p>
+<p>  路径覆盖：</p>
+<p>  2.基本路径测试</p>
+<ul>
 <li><p>&#x3D;&#x3D;黑盒测试&#x3D;&#x3D;</p>
 <p>定义：把软件比作一个黑盒子，不考虑内部是如何实现的，只考虑外部功能的运行，检查软件的输入和输出是否匹配</p>
 <p>方法：</p>
