@@ -1,189 +1,222 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8" />
+    <title>很高兴能够见到你~</title>
+    <meta name="author" content="wugeqi" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
 
 
 
-<title>
-  
-    很高兴能够见到你~
-  
-</title>
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="很高兴能够见到你~">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="很高兴能够见到你~">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="wugeqi">
-<meta name="twitter:card" content="summary">
-
-
-  <link rel="alternative" href="/atom.xml" title="很高兴能够见到你~" type="application/atom+xml">
-
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-
-<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
-
-
-<link rel="stylesheet" href="/styles/main.css">
+<script src="/js/lib/preview.js"></script>
 
 
 
 
 
+<script src="/js/lib/home.js"></script>
 
+<link rel="stylesheet" href="/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
-<body
-  
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">很高兴能够见到你~</a>
-</div>
-
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">很高兴能够见到你~</a></h1>
-    
-    <div class="info">
-      <div class="content">
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>很高兴能够见到你~</span>
+        </a>
         
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
         
-          <div class="author">wugeqi</div>
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
         
-      </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="https://th.bing.com/th/id/OIP.-k56Uu3KSpg4pz3VdMagCgHaHZ?w=217&amp;h=217&amp;c=7&amp;r=0&amp;o=5&amp;dpr=2&amp;pid=1.7"></a>
-          
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;很高兴能够见到你~</span>
         </div>
-      
-    </div>
-  </div>
-  <div class="body">
-    
-      
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">Category</a>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
                 
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">Tag</a>
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
                 
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">14</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage" external="false">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year" external="false">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/wugeqi" title="Github" target="_blank" rel="noopener">Github</a>
-              </li>
-            
-          
-        </ul>
-      
-    
-  </div>
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
 </div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
 
-    <div class="main-content">
-      
-        <div style="max-width: 1000px">
-      
-          
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/JAVA/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/JAVA/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/background.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>很高兴能够见到你~</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
         
 
+<div class="post">
+    <a href="/2025/06/02/JAVA/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
-      </div>
-      <div class="article-entry">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-          <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><p>1.JAVA基础</p>
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><p>1.JAVA基础</p>
 <p>（1）jvm、jre、jdk：</p>
-<p>jvm：java虚拟机</p>
-<p>jre:程序运行的的最小环境</p>
-<p>jdk：一系列工具</p>
-<p>面向对象：将世界上的一切东西当作对象，程序功能的实现就是通过对象的交互实现的</p>
-<p>继承：指一个类可以实现另一个类中的所有对象和方法</p>
-<p>封装：指对象不对外暴露细节，只对外界提供交互的接口</p>
-<p>多态：</p>
+<p>jvm：java虚拟机，是程序运行时的环境，可以把字节码转换成机器码，并执行程序</p>
+<p>jre:程序运行的的最小环境，包含了jvm和一组库</p>
+<p>jdk：java开发工具包</p>
+<p>面向对象：将世界上的一切东西都抽象成了一个对象，然后每个对象都有自己的属性和方法，程序功能的实现就是通过对象的交互实现的</p>
+<p>继承：指一个类可以共享另一个类中的所有对象和方法</p>
+<p>封装：指将对象的属性和行为结合在一起，对象不对外暴露细节，只对外界提供交互的接口</p>
+<p>多态：多个类的对象可以对同一个事务做出响应</p>
 <p>运行时多态：重写，指子类可以重写父类的方法</p>
 <p>编译时多态：重载，指在同一个类中允许参数不同的重名方法</p>
 <p>反射：运行时可以获取任意一个类的所有信息，字段，方法等</p>
-<p>获取.class：1.根据完整包名2.根据实例的对象获得3.根据</p>
+<p>获取.class：1.根据完整包名2.根据实例的对象获得3.根据包名获得</p>
+<p>泛型：允许类、接口和方法在定义时使用一个或多个类型参数，这些类型在使用时可以指定为具体的类型</p>
 <p>动态代理：运行时动态生成代理</p>
 <p>方法：</p>
-<p>jdk：主要是对实现接口的类，通过调用invoktionhander，并重写invoke（）方法</p>
+<p>jdk：主要是对实现接口的类，通过调用invocationhander，并重写invoke（）方法</p>
 <p>cglib：主要是对没有实现接口的类，通过创建子类继承父类，然后对方法进行重写，实现动态代理</p>
-<p>注解：根据字段决定程序的执行的方式</p>
+<p>注解：一种声明式接口，根据注解决定程序的执行的方式</p>
 <p>生命周期：</p>
 <p>字节：编译时没有</p>
 <p>编译：运行时没有</p>
@@ -196,9 +229,13 @@
 <p>clone</p>
 <p>序列化</p>
 <p>修饰符：</p>
-<p>final：表示对象一直不变，如果修饰的是基本数据类型，表示其值一直不变，如果修饰的是引用数据类型，表示执行的引用一直不变，但是引用的对象中的值可以改变</p>
-<p>static：静态修饰符，可以修饰变量、方法、类一旦经过修饰，就会变成类的一部分。</p>
-<p>接口和</p>
+<p>final：表示对象不可更改不可继承，如果修饰的是基本数据类型，表示其值一直不变，如果修饰的是引用数据类型，表示执行的引用一直不变，但是引用的对象中的值可以改变</p>
+<p>static：静态修饰符，可以修饰变量、方法、类一旦经过修饰，就会变成类的本身一部分。在类加载时被初始化，不依赖类的实例</p>
+<p>abstarct:抽象，可以修饰类和方法，抽象类不可以被实例化，抽象方法只有声明没有实现</p>
+<p>接口和抽象类：</p>
+<p>接口：一个完全抽象的类，定义一组的行为规范，不提供具体实现，只有常量和抽象方法</p>
+<p>抽象类：用来描述类的共同特性和行为，可以有成员变量、构造方法和具体方法</p>
+<p>异常</p>
 <p>2.JAVA集合</p>
 <p>（1）list</p>
 <p>arraylist</p>
@@ -222,9 +259,8 @@
 <p>（2）保持线程安全</p>
 <p>a.锁</p>
 <p>锁分类：</p>
-<p>乐观锁：</p>
-<p>CAS&#x2F;volitie</p>
-<p>悲观锁</p>
+<p>乐观锁：在乐观锁的思想中，认为数据访问冲突的概率很低，因此不加锁直接进行操作，但在更新数据时会进行版本比对，以确保数据的一致性。</p>
+<p>悲观锁：它采取预防性的措施，在修改数据之前将其锁定，并在操作完成后释放锁定</p>
 <p>syncronized</p>
 <p>reenentranlock</p>
 <p>自旋锁</p>
@@ -232,147 +268,134 @@
 <p>b.原子类</p>
 <p>c.线程安全的集合</p>
 
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/JAVA/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/02/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h1>
-        
-      </div>
     </div>
-
-  
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h1>
+            
+        </div>
     </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/%E6%95%B0%E6%8D%AE%E5%BA%93/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+    <div class="post-tags">
         
-
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1>
-        
-      </div>
     </div>
+    <a href="/2025/06/02/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="go-post">阅读全文</a>
+</div>
 
-  
+<div class="post">
+    <a href="/2025/06/02/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
+        
+        
     </div>
-  
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>1.基本知识</p>
+<p>2.索引：加速搜索的一种 结构</p>
+<p>分类：</p>
+<p>聚簇索引、非聚簇索引</p>
+<p>3.锁</p>
+<p>4.事务</p>
+<p>5.日志</p>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/rpc/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/rpc/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="rpc"><a href="#rpc" class="headerlink" title="rpc"></a><strong>rpc</strong></h1><hr>
-
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/02/rpc/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>工厂模式</p>
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="rpc"><a href="#rpc" class="headerlink" title="rpc"></a><strong>rpc</strong></h1><hr>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2025/06/02/rpc/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/06/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>工厂模式</p>
 <p>定义了一个创建对象的抽象方法，由子类决定要实例化的类。工厂方法模式将对象的实例化推迟到子类。</p>
 <p>策略模式</p>
 <p>策略模式定义了一系列算法，并将每个算法封装起来，使他们可以相互替换，且算法的变化不会影响到使用算法的客户。允许你在运行时选择算法的实现，通过将不同的行为（策略）封装在独立的类中，从而将这些行为抽象出来。这样可以让客户端通过不同的策略对象，选择不同的实现方式，而不需要改变客户端代码。</p>
@@ -380,41 +403,36 @@
 <p>定义一个操作中算法的骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变算法的结构即可重定义该算法的某些特定步骤。</p>
 <p>完成一件事情，有固定的数个步骤，但是每个步骤根据对象的不同，而实现细节不同；就可以在父类中定义一个完成该事情的总方法，按照完成事件需要的步骤去调用其每个步骤的实现方法。每个步骤的具体实现，由子类完成。</p>
 
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/spring/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/spring/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/02/spring/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h1><h2 id="1-spring"><a href="#1-spring" class="headerlink" title="1.spring"></a>1.spring</h2><p>定义：一种开发框架</p>
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h1><h2 id="1-spring"><a href="#1-spring" class="headerlink" title="1.spring"></a>1.spring</h2><p>定义：一种开发框架</p>
 <p>特性：</p>
 <p>di:依赖注入是将对象的创建和依赖关系的管理交给 Spring 容器来完成，类只需要声明自己所依赖的对象，容器会在运行时将这些依赖对象注入到类中，从而降低了类与类之间的耦合度，提高了代码的可维护性和可测试性。</p>
 <p>实现方式：</p>
@@ -498,76 +516,66 @@
 <h2 id="4-mybatis"><a href="#4-mybatis" class="headerlink" title="4.mybatis"></a>4.mybatis</h2><p>#：防止依赖注入</p>
 <p>$：</p>
 
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/spring/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/redis/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/redis/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/02/redis/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1>
-        
-      </div>
     </div>
-
-  
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h1>
+            
+        </div>
     </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/jvm/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/jvm/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+    <div class="post-tags">
         
-
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="jvm"><a href="#jvm" class="headerlink" title="jvm"></a>jvm</h1><p>1.内存模型</p>
+    </div>
+    <a href="/2025/06/02/redis/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/06/02/jvm/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="jvm"><a href="#jvm" class="headerlink" title="jvm"></a>jvm</h1><p>1.内存模型</p>
 <p>（1）堆：存放对象实例</p>
 <p>新生代：新创建的对象</p>
 <p>老年代：存放过一次或多次minor gc仍然存活的对象</p>
@@ -685,41 +693,36 @@
 <p><code>XX:+UseG1GC  手动指定使用G1收集器执行内存回收任务（JDK9后不用设置，默认就是G1）。 -XX:G1HeapRegionSize  设置每个Region的大小。值是2的幂,范围是1MB到32MB之间,目标是根据最小的Java堆大小划分出约2048个区域。默认是堆内存的1/2000。 -XX:MaxGCPauseMillis  设置期望达到的最大GC停顿时间指标(JVM会尽力实现,但不保证达到)。默认值是200ms（如果这个值设置很小,如20ms,那么它收集的region会少,这样长时间后,堆内存会满。产生FullGC,FullGC会出现STW,反而影响用户体验)。 -XX:G1NewSizePercent  新生代的最小值默认是5%，此参数在实验阶段，如果想使用加-XX:+UnlockExperimentalVMOptions参数。 -XX:G1MaxNewSizePercent 新生代的最大值，默认值是60%，此参数在实验阶段，如果想使用加-XX:+UnlockExperimentalVMOptions参数。 -XX:ParallelGCThreads 设置STW时GC线程数的值。最多设置为8(垃圾回收线程)。 -XX:ConcGCThreads 设置并发标记的线程数。将n设置为并行垃圾回收线程数(ParallelGCThreads)的1/4左右。 -XX:InitiatingHeapOccupancyPercent  设置触发并发GC周期的Java堆占用率阈值。超过此值,就触发GC。默认值是45%。 </code></p>
 <p>（5）CMS会产生浮动垃圾：CMS清除垃圾时是并发清除的，这个时候，垃圾回收线程和用户线程同时工作会产生浮动垃圾，也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾。而G1没有浮动垃圾，G1的筛选回收是多个垃圾回收线程并行gc的，没有浮动垃圾的回收，在执行‘并发清理’步骤时，用户线程也会同时产生一部分可回收对象，但是这部分可回收对象只能在下次执行清理是才会被回收。如果在清理过程中预留给用户线程的内存不足就会出现‘Concurrent Mode Failure’,一旦出现此错误时便会切换到SerialOld收集方式。</p>
 
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/jvm/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/02/%E8%AE%A1%E7%BD%91/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/02/%E8%AE%A1%E7%BD%91/"><span class="article-date">
-  2025-06-02
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/02/%E8%AE%A1%E7%BD%91/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/2
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h1><h2 id="一、概览"><a href="#一、概览" class="headerlink" title="一、概览"></a>一、概览</h2><h3 id="1-osi七层模型"><a href="#1-osi七层模型" class="headerlink" title="1.osi七层模型"></a>1.osi七层模型</h3><p>应用层：负责给应用程序提供统一的接口</p>
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h1><h2 id="一、概览"><a href="#一、概览" class="headerlink" title="一、概览"></a>一、概览</h2><h3 id="1-osi七层模型"><a href="#1-osi七层模型" class="headerlink" title="1.osi七层模型"></a>1.osi七层模型</h3><p>应用层：负责给应用程序提供统一的接口</p>
 <p>表示层：负责把数据转换成兼容另一个系统能够识别的格式</p>
 <p>会话层：负责建立、管理和终止表示层实体之间的通信会话</p>
 <p>传输层：负责端到端的数据传输</p>
@@ -948,41 +951,36 @@
 <p>HTTP3.0：1.连接快2.连接迁移3.无队头堵塞</p>
 <p>基于UDP实现的QUIC协议</p>
 
-        
-      </div>
+            
+        </div>
     </div>
-
-  
+    <div class="post-tags">
+        
+        
+        
     </div>
-  
+    <a href="/2025/06/02/%E8%AE%A1%E7%BD%91/" class="go-post">阅读全文</a>
+</div>
 
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" >
-  
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"><span class="article-date">
-  2025-06-01
-</span>
-</a>
+<div class="post">
+    <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">
+        <h2 class="post-title"></h2>
+    </a>
+    <div class="category-and-date">
         
-
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/1
+        </span>
         
-
-      </div>
-      <div class="article-entry">
         
-          <h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a><strong>软件测试</strong></h1><h2 id="一、基本测试内容的学习"><a href="#一、基本测试内容的学习" class="headerlink" title="一、基本测试内容的学习"></a>一、基本测试内容的学习</h2><h3 id="1-测试种类"><a href="#1-测试种类" class="headerlink" title="1.测试种类"></a>1.测试种类</h3><h4 id="按方法分"><a href="#按方法分" class="headerlink" title="按方法分"></a><u>按方法分</u></h4><ul>
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a><strong>软件测试</strong></h1><h2 id="一、基本测试内容的学习"><a href="#一、基本测试内容的学习" class="headerlink" title="一、基本测试内容的学习"></a>一、基本测试内容的学习</h2><h3 id="1-测试种类"><a href="#1-测试种类" class="headerlink" title="1.测试种类"></a>1.测试种类</h3><h4 id="按方法分"><a href="#按方法分" class="headerlink" title="按方法分"></a><u>按方法分</u></h4><ul>
 <li><p>&#x3D;&#x3D;白盒测试&#x3D;&#x3D;</p>
 <p>定义：内部具体实现是透明的，测试人员可以根据代码内部结构设置测试用例检查软件的代码、函数和方法等内部结构</p>
 <p>分类：静态分析：不需要执行程序就可以进行的测试，例如代码审查代码扫描（SonarQube)  动态分析：需要执行程序才可以进行的测试</p>
@@ -1307,121 +1305,93 @@
 </li>
 </ul>
 <h2 id="二、提高测试内容的学习"><a href="#二、提高测试内容的学习" class="headerlink" title="二、提高测试内容的学习"></a>二、提高测试内容的学习</h2><h3 id="1-python"><a href="#1-python" class="headerlink" title="1.python"></a>1.python</h3><h3 id="2-自动化框架"><a href="#2-自动化框架" class="headerlink" title="2.自动化框架"></a>2.自动化框架</h3>
+            
+        </div>
+    </div>
+    <div class="post-tags">
         
-      </div>
+        
+        
     </div>
-
-  
-    </div>
-  
-
-
-
-  <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
-  </div>
-
-
-
-
-          <div class="main-footer">
-  
-    © 2025 很高兴能够见到你~ - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
-  
+    <a href="/2025/06/01/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="go-post">阅读全文</a>
 </div>
 
-      
-        </div>
-      
+
+        <div class="page-current">
+    
+    <span class="current">1</span>
+    
+    <a class="page-num" href="/page/2">
+        2
+    </a>
+    
+    
+    
+    
+    <a class="page-num" href="/page/2/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
     </div>
-  </div>
-  
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar.jpg" alt="avatar" />
+        </div>
+        <div class="name">wugeqi</div>
+        <div class="description">
+            <p>Description<br>…</p>
 
-
-  
-<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-
-  
-<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
             </div>
-          </div>
+            
         </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
+        
     </div>
-  </div>
+</div>
 
-  
-<script src="/PhotoSwipe/photoswipe.js"></script>
+    </div>
+    
+</div>
 
-  
-<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 很高兴能够见到你~
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;wugeqi
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
 
-
-
-
-<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
-
-
-<script src="/scripts/main.js"></script>
-
-
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
 </body>
 </html>
