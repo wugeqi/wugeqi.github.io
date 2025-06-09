@@ -278,7 +278,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E6%84%9F%E6%83%B3/" style="color: #ffa2c4">感想</a>
+            <a href="/tags/%E6%84%9F%E6%83%B3/" style="color: #00a596">感想</a>
         </span>
         
     </div>
@@ -326,17 +326,17 @@
         
         <span class="tag">
             
-            <a href="/tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91/" style="color: #ffa2c4">测试开发</a>
+            <a href="/tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91/" style="color: #03a9f4">测试开发</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/%E9%9D%A2%E8%AF%95/" style="color: #ff7d73">面试</a>
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" style="color: #00bcd4">面试</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/%E5%BF%AB%E6%89%8B/" style="color: #00a596">快手</a>
+            <a href="/tags/%E5%BF%AB%E6%89%8B/" style="color: #ffa2c4">快手</a>
         </span>
         
     </div>
@@ -385,7 +385,7 @@
         
         <span class="tag">
             
-            <a href="/tags/%E6%B5%8B%E8%AF%95tags/" style="color: #ff7d73">测试tags</a>
+            <a href="/tags/%E6%B5%8B%E8%AF%95tags/" style="color: #ffa2c4">测试tags</a>
         </span>
         
     </div>
@@ -394,9 +394,18 @@
 
 <div class="post">
     <a href="/2025/06/02/JAVA/">
-        <h2 class="post-title"></h2>
+        <h2 class="post-title">JAVA八股</h2>
     </a>
     <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%85%AB%E8%82%A1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                八股
+            </a>
+        </span>
         
         <span class="date">
             <span class="icon">
@@ -410,82 +419,32 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><p>1.JAVA基础</p>
-<p>（1）jvm、jre、jdk：</p>
-<p>jvm：java虚拟机，是程序运行时的环境，可以把字节码转换成机器码，并执行程序</p>
-<p>jre:程序运行的的最小环境，包含了jvm和一组库</p>
-<p>jdk：java开发工具包</p>
-<p>面向对象：将世界上的一切东西都抽象成了一个对象，然后每个对象都有自己的属性和方法，程序功能的实现就是通过对象的交互实现的</p>
-<p>继承：指一个类可以共享另一个类中的所有对象和方法</p>
-<p>封装：指将对象的属性和行为结合在一起，对象不对外暴露细节，只对外界提供交互的接口</p>
-<p>多态：多个类的对象可以对同一个事务做出响应</p>
-<p>运行时多态：重写，指子类可以重写父类的方法</p>
-<p>编译时多态：重载，指在同一个类中允许参数不同的重名方法</p>
-<p>反射：运行时可以获取任意一个类的所有信息，字段，方法等</p>
-<p>获取.class：1.根据完整包名2.根据实例的对象获得3.根据包名获得</p>
-<p>泛型：允许类、接口和方法在定义时使用一个或多个类型参数，这些类型在使用时可以指定为具体的类型</p>
-<p>动态代理：运行时动态生成代理</p>
-<p>方法：</p>
-<p>jdk：主要是对实现接口的类，通过调用invocationhander，并重写invoke（）方法</p>
-<p>cglib：主要是对没有实现接口的类，通过创建子类继承父类，然后对方法进行重写，实现动态代理</p>
-<p>注解：一种声明式接口，根据注解决定程序的执行的方式</p>
-<p>生命周期：</p>
-<p>字节：编译时没有</p>
-<p>编译：运行时没有</p>
-<p>运行：都有</p>
-<p>方法：反射获取字段，然后根据动态代理对原方法进行扩展</p>
-<p>深拷贝和浅拷贝：</p>
-<p>浅拷贝：不会递归拷贝引用，，也就是说如果是个引用对象，进行浅拷贝的时候，会创建一个新对象存储着原来的引用，也就是说两个对象指向着同一个引用</p>
-<p>深拷贝：会递归拷贝引用</p>
-<p>递归调用</p>
-<p>clone</p>
-<p>序列化</p>
-<p>修饰符：</p>
-<p>final：表示对象不可更改不可继承，如果修饰的是基本数据类型，表示其值一直不变，如果修饰的是引用数据类型，表示执行的引用一直不变，但是引用的对象中的值可以改变</p>
-<p>static：静态修饰符，可以修饰变量、方法、类一旦经过修饰，就会变成类的本身一部分。在类加载时被初始化，不依赖类的实例</p>
-<p>abstarct:抽象，可以修饰类和方法，抽象类不可以被实例化，抽象方法只有声明没有实现</p>
-<p>接口和抽象类：</p>
-<p>接口：一个完全抽象的类，定义一组的行为规范，不提供具体实现，只有常量和抽象方法</p>
-<p>抽象类：用来描述类的共同特性和行为，可以有成员变量、构造方法和具体方法</p>
-<p>异常</p>
-<p>2.JAVA集合</p>
-<p>（1）list</p>
-<p>arraylist</p>
-<p>扩容机制</p>
-<p>linkedlist</p>
-<p>区别</p>
-<p>copyonwritelist</p>
-<p>vector</p>
-<p>（2）map</p>
-<p>hashmap</p>
-<p>hashtable</p>
-<p>concurrentmap</p>
-<p>（3）set</p>
-<p>3.JAVA多线程</p>
-<p>怎么实现多线程？</p>
-<p>（1）创建多线程的方式</p>
-<p>a.继承runable接口</p>
-<p>b.继承callable接口和futuretask</p>
-<p>c.线程池</p>
-<p>d.thread类</p>
-<p>（2）保持线程安全</p>
-<p>a.锁</p>
-<p>锁分类：</p>
-<p>乐观锁：在乐观锁的思想中，认为数据访问冲突的概率很低，因此不加锁直接进行操作，但在更新数据时会进行版本比对，以确保数据的一致性。</p>
-<p>悲观锁：它采取预防性的措施，在修改数据之前将其锁定，并在操作完成后释放锁定</p>
-<p>syncronized</p>
-<p>reenentranlock</p>
-<p>自旋锁</p>
-<p>读写锁</p>
-<p>b.原子类</p>
-<p>c.线程安全的集合</p>
-
+            <p>[TOC]</p>
             
         </div>
     </div>
     <div class="post-tags">
         
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
         
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/" style="color: #00bcd4">JAVA基础</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/JAVA%E9%9B%86%E5%90%88/" style="color: #00a596">JAVA集合</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/JAVA%E5%B9%B6%E5%8F%91/" style="color: #00bcd4">JAVA并发</a>
+        </span>
         
     </div>
     <a href="/2025/06/02/JAVA/" class="go-post">阅读全文</a>

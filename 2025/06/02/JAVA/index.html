@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title> | \(@^0^@)/</title>
+    <title>JAVA八股 | \(@^0^@)/</title>
     <meta name="author" content="wugeqi" />
     <meta name="description" content="迟早云淡风轻" />
     <meta name="keywords" content="" />
@@ -156,7 +156,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1></h1>
+        <h1>JAVA八股</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -166,13 +166,114 @@
             2025/6/2
         </span>
         
+        <span class="category">
+            <a href="/categories/%E5%85%AB%E8%82%A1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                八股
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/" style="color: #00bcd4">
+                    JAVA基础
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/JAVA%E9%9B%86%E5%90%88/" style="color: #ff7d73">
+                    JAVA集合
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/JAVA%E5%B9%B6%E5%8F%91/" style="color: #03a9f4">
+                    JAVA并发
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <h1 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h1><p>1.JAVA基础</p>
-<p>（1）jvm、jre、jdk：</p>
-<p>jvm：java虚拟机，是程序运行时的环境，可以把字节码转换成机器码，并执行程序</p>
+        <p>[TOC]</p>
+<span id="more"></span>
+
+<h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA<strong>基础</strong></h1><h2 id="java语言特点："><a href="#java语言特点：" class="headerlink" title="java语言特点："></a>java语言特点：</h2><p>1.简单易学-&gt;语法简单,上手容易</p>
+<p><u>2.面向对象</u>:将世界上的事抽象为对象,每个对象有他自己的属性和行为。面向对象编程的设计思想是以对象为中心，通过对象之间的交互实现程序的功能，具有灵活性和可扩展性。</p>
+<p><u>(1)继承</u>:子类可以使用父类的所有数据结构和方法,是代码复用的重要手段，通过继承可以建立类与类之间的层次关系，使得结构更加清晰</p>
+<p>&lt;可以重写构造方法吗?&gt;</p>
+<p>&#x2F;**</p>
+<p>子类 不能重写父类的构造方法，因为构造方法不参与继承和重写。</p>
+<p>子类构造方法 必须调用父类构造方法，可以通过 <code>super()</code> 来显式调用父类构造方法。若子类没有显式调用 <code>super()</code>，编译器会自动插入对父类无参构造方法的调用。</p>
+<p>如果父类没有无参构造方法，而子类构造方法又没有显式调用父类的有参构造方法，编译器会报错，提示找不到父类的构造方法。</p>
+<p>**&#x2F;</p>
+<p>父子类中的执行顺序和类加载顺序:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43834477/article/details/141856800?fromshare=blogdetail&sharetype=blogdetail&sharerId=141856800&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/weixin_43834477/article/details/141856800?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=141856800&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>super:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wenxuankeji/article/details/145739729?fromshare=blogdetail&sharetype=blogdetail&sharerId=145739729&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/wenxuankeji/article/details/145739729?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=145739729&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zai_xia/article/details/79946984?fromshare=blogdetail&sharetype=blogdetail&sharerId=79946984&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/zai_xia/article/details/79946984?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=79946984&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>super和this的区别：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44897733/article/details/121580435?fromshare=blogdetail&sharetype=blogdetail&sharerId=121580435&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/qq_44897733/article/details/121580435?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=121580435&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p><u>(2)封装</u>:将对象所有属性和和行为结合在一起,对外隐藏对象的内部细节，仅通过对象提供的接口与外界交互,目的是增强安全性和简化编程，使得对象更加独立</p>
+<p><u>(3)多态</u>:指不同的对象可以对同一消息做出不同的响应。即同一个接口，使用不同的实例而执行不同操作。</p>
+<p><a target="_blank" rel="noopener" href="https://liuyangjun.blog.csdn.net/article/details/79788326?fromshare=blogdetail&sharetype=blogdetail&sharerId=79788326&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://liuyangjun.blog.csdn.net/article/details/79788326?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=79788326&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>**接口：怎么可以称为同一接口？**接口不可以实例化，但是可以作为引用，指向实现了该接口的类的对象，所以会有同一个接口，使用不同的实例而执行不同操作</p>
+<p><a target="_blank" rel="noopener" href="https://liuyangjun.blog.csdn.net/article/details/80259836?fromshare=blogdetail&sharetype=blogdetail&sharerId=80259836&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://liuyangjun.blog.csdn.net/article/details/80259836?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=80259836&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>接口和抽象类：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/WanguideShenghuo/article/details/136785762?fromshare=blogdetail&sharetype=blogdetail&sharerId=136785762&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/WanguideShenghuo/article/details/136785762?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=136785762&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>抽象类和普通类：</p>
+<p>（1）实例化：普通类可以被实例化，抽象类不能被实例化，只有被继承</p>
+<p>（2）普通类可以被其他类继承和使用，而抽象类一般作为基类，被其他类继承和扩展使用</p>
+<p>（3）方法实现：普通类中的方法可以有具体的实现，而抽象类终端饿方法可以有实现也可以没有实现，也就是说抽象类中有抽象方法，普通类中没有</p>
+<p>内部类和外部类：</p>
+<p>内部类：</p>
+<p>（1）定义：可以把一个类的定义放入另一个类的内部。内部类是 一个类的属性，与其他属性一致</p>
+<p>（2）分类：</p>
+<p>a.静态内部类:定义在类内部的静态类</p>
+<p>b.</p>
+<p>静态和非静态：static 不可修饰构造函数、不能修饰抽象方法</p>
+<p>方法签名：方法的名称和参数类型。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53079156/article/details/121732307?fromshare=blogdetail&sharetype=blogdetail&sharerId=121732307&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/qq_53079156/article/details/121732307?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=121732307&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>分类:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/L326214/article/details/143484347?fromshare=blogdetail&sharetype=blogdetail&sharerId=143484347&sharerefer=PC&sharesource=TSQ472004&sharefrom=from_link">https://blog.csdn.net/L326214/article/details/143484347?fromshare=blogdetail&amp;sharetype=blogdetail&amp;sharerId=143484347&amp;sharerefer=PC&amp;sharesource=TSQ472004&amp;sharefrom=from_link</a></p>
+<p>a.重写:运行时多态,指子类可以提供父类中的同名方法的具体实现（方法名、返回类型、参数列表必须相同）</p>
+<p>b.重载:编译时多态,指在同一类中可以存在参数不同的方法</p>
+<p>c.接口与实现：多个类可以实现同一个接口，并且用接口类型的引用来调用这些类的方法</p>
+<p>d.向上转型和向下转型：</p>
+<p>向上转型：使用父类类型的引用指向子类对象</p>
+<p>父类引用&#x3D;子类对象</p>
+<p>向下转型：将父类引用转回子类类型</p>
+<p>父类引用&#x3D;子类对象</p>
+<p>子类引用&#x3D;（子类）父类引用</p>
+<p><u>3.平台无关性</u>：一次编写，多次运行，在编译成字节码后，通过jvm将字节码转换成能被当前操作系统能执行的机器码</p>
+<p><u>4.支持多线程</u>：thread类，runable接口，callable接口和futuretask,线程池</p>
+<p><u>5.可靠性</u>：具备异常处理和自动内存管理机制</p>
+<p>（1）异常处理</p>
+<p>（2）内存管理，<a target="_blank" rel="noopener" href="https://wugeqi.github.io/2025/06/02/jvm/">jvm垃圾处理机制</a></p>
+<p><u>6.安全性</u>：<u>访问权限修饰符</u>、限制程序直接访问操作系统资源（怎么做的？</p>
+<p>7.编译与解释并存</p>
+<p>编译型：将源代码通过编译器翻译成该平台可以执行的机器码，如c&#x2F;c++&#x2F;go&#x2F;rust</p>
+<p>解释型：将源代码通过解释器一句一句的将代码解释成机器代码后再执行，如python、PHP、javascript</p>
+<p>java:java程序要经过先编译，后解释两个步骤，由java编写的程序要先经过编译步骤，生成字节码后,然后在jvm中一个方法调用计数器，当累计计数大于一定值的时候，就使用jit进行编译生成机器码文件，否则由java解释器来解释执行</p>
+<!--jit和aot:-->
+
+<!--aot：会在程序被执行前就将其编译成机器码，属于静态编译，不需要预热，提高启动速度-->
+
+<p>8.网络编程</p>
+<h2 id="jvm、jre、jdk："><a href="#jvm、jre、jdk：" class="headerlink" title="jvm、jre、jdk："></a>jvm、jre、jdk：</h2><p>jvm：java虚拟机，是程序运行时的环境，可以把字节码转换成机器码，并执行程序</p>
 <p>jre:程序运行的的最小环境，包含了jvm和一组库</p>
 <p>jdk：java开发工具包</p>
 <p>面向对象：将世界上的一切东西都抽象成了一个对象，然后每个对象都有自己的属性和方法，程序功能的实现就是通过对象的交互实现的</p>
